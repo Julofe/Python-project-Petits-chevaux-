@@ -1,0 +1,9 @@
+from tkinter import* 
+fen = Tk()
+can=Canvas(fen,width=600,height=600,background='white')
+can.pack()
+rect=can.create_rectangle(5,5,200,217,fill="yellow")
+rect=can.create_rectangle(400,5,600,210,fill="red")
+rect=can.create_rectangle(5,400,200,600,fill="green")
+rect=can.create_rectangle(400,400,600,600,fill="blue")
+fen.mainloop()
