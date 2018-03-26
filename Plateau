@@ -9,20 +9,59 @@ rect3=can.create_rectangle(5,395,200,600,fill="green")
 rect4=can.create_rectangle(395,395,600,600,fill="blue")
 rect5=can.create_rectangle(650,250,750,350,fill="black")
 oval=can.create_oval(650,250,650,250)
+oval1=can.create_oval(650,250,650,250)
+oval2=can.create_oval(650,250,650,250)
+oval3=can.create_oval(650,250,650,250)
+oval4=can.create_oval(650,250,650,250)
+oval5=can.create_oval(650,250,650,250)
+oval6=can.create_oval(650,250,650,250)
 
 def NouveauLance():
     global oval
+    global oval1
+    global oval2
+    global oval3
+    global oval4
+    global oval5
+    global oval6
+    
+    can.delete(oval1)
+    can.delete(oval2)
+    can.delete(oval3)
+    can.delete(oval4)
+    can.delete(oval5)
+    can.delete(oval6)
     can.delete(oval)
     nb = randint(1,6)
     if nb == 1 :
-        oval=can.create_oval(690,290,710,310, fill="white")
+        oval1=can.create_oval(690,290,710,310, fill="white")
     if nb == 2 :
-        oval
-        oval
+        oval1=can.create_oval(670,270,690,290, fill="white")
+        oval2=can.create_oval(710,310,730,330, fill="white")
     if nb == 3 :
+        oval1=can.create_oval(690,290,710,310, fill="white")
+        oval2=can.create_oval(670,270,690,290, fill="white")
+        oval3=can.create_oval(710,310,730,330, fill="white")
     if nb == 4 :
+        oval1=can.create_oval(670,270,690,290, fill="white")
+        oval2=can.create_oval(710,310,730,330, fill="white")
+        oval3=can.create_oval(670,310,690,330, fill="white")
+        oval4=can.create_oval(710,270,730,290, fill="white")
     if nb == 5 :
-    if nb == 6
+        oval1=can.create_oval(690,290,710,310, fill="white")
+        oval2=can.create_oval(670,270,690,290, fill="white")
+        oval3=can.create_oval(710,310,730,330, fill="white")
+        oval4=can.create_oval(670,310,690,330, fill="white")
+        oval5=can.create_oval(710,270,730,290, fill="white")
+    if nb == 6 :
+
+        oval1=can.create_oval(670,265,690,285, fill="white")
+        oval2=can.create_oval(710,315,730,335, fill="white")
+        oval3=can.create_oval(670,315,690,335, fill="white")
+        oval4=can.create_oval(710,265,730,285, fill="white")
+        oval5=can.create_oval(670,290,690,310, fill="white")
+        oval6=can.create_oval(710,290,730,310, fill="white")
+
 
 # Création d'un widget Button (bouton Lancer)
 BoutonLancer = Button(fen, text ='Lancer', command = NouveauLance)
