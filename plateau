@@ -1,0 +1,102 @@
+from tkinter import*
+from random import*
+fen = Tk()
+can=Canvas(fen,width=800,height=600,background='white')
+can.pack()
+
+#Plateau
+Ecuriej=can.create_rectangle(5,5,210,210,fill="yellow")
+Ecurier=can.create_rectangle(395,5,600,210,fill="red")
+Ecuriev=can.create_rectangle(5,395,200,600,fill="green")
+Ecurieb=can.create_rectangle(395,395,600,600,fill="blue")
+
+def Cheminj() :
+    can.create_rectangle(235,270,270,334,fill="yellow")
+    can.create_rectangle(200,270,235,334,fill="yellow")
+    can.create_rectangle(165,270,200,334,fill="yellow")
+    can.create_rectangle(130,270,165,334,fill="yellow")
+    can.create_rectangle(95,270,130,334,fill="yellow")
+    can.create_rectangle(60,270,95,334,fill="yellow")
+Cheminj ()    
+def Cheminr() :
+    can.create_rectangle(5,5,210,210,fill="red")
+    can.create_rectangle(235,270,270,334,fill="red")
+    can.create_rectangle(235,270,270,334,fill="red")
+    can.create_rectangle(235,270,270,334,fill="red")
+    can.create_rectangle(235,270,270,334,fill="red")
+    can.create_rectangle(235,270,270,334,fill="red")
+    
+Cheminv=can.create_rectangle(5,5,210,210,fill="yellow")
+Cheminb=can.create_rectangle(5,5,210,210,fill="yellow")
+Prairie=can.create_rectangle(270,270,334,334,fill="black")
+
+#Dé
+Dé=can.create_rectangle(650,250,750,350,fill="black")
+oval=can.create_oval(650,250,650,250)
+oval1=can.create_oval(650,250,650,250)
+oval2=can.create_oval(650,250,650,250)
+oval3=can.create_oval(650,250,650,250)
+oval4=can.create_oval(650,250,650,250)
+oval5=can.create_oval(650,250,650,250)
+oval6=can.create_oval(650,250,650,250)
+
+def NouveauLance():
+    global oval
+    global oval1
+    global oval2
+    global oval3
+    global oval4
+    global oval5
+    global oval6
+    
+    can.delete(oval1)
+    can.delete(oval2)
+    can.delete(oval3)
+    can.delete(oval4)
+    can.delete(oval5)
+    can.delete(oval6)
+    can.delete(oval)
+    nb = randint(1,6)
+    if nb == 1 :
+        oval1=can.create_oval(690,290,710,310, fill="white")
+    if nb == 2 :
+        oval1=can.create_oval(670,270,690,290, fill="white")
+        oval2=can.create_oval(710,310,730,330, fill="white")
+    if nb == 3 :
+        oval1=can.create_oval(690,290,710,310, fill="white")
+        oval2=can.create_oval(670,270,690,290, fill="white")
+        oval3=can.create_oval(710,310,730,330, fill="white")
+    if nb == 4 :
+        oval1=can.create_oval(670,270,690,290, fill="white")
+        oval2=can.create_oval(710,310,730,330, fill="white")
+        oval3=can.create_oval(670,310,690,330, fill="white")
+        oval4=can.create_oval(710,270,730,290, fill="white")
+    if nb == 5 :
+        oval1=can.create_oval(690,290,710,310, fill="white")
+        oval2=can.create_oval(670,270,690,290, fill="white")
+        oval3=can.create_oval(710,310,730,330, fill="white")
+        oval4=can.create_oval(670,310,690,330, fill="white")
+        oval5=can.create_oval(710,270,730,290, fill="white")
+    if nb == 6 :
+
+        oval1=can.create_oval(670,265,690,285, fill="white")
+        oval2=can.create_oval(710,315,730,335, fill="white")
+        oval3=can.create_oval(670,315,690,335, fill="white")
+        oval4=can.create_oval(710,265,730,285, fill="white")
+        oval5=can.create_oval(670,290,690,310, fill="white")
+        oval6=can.create_oval(710,290,730,310, fill="white")
+
+
+# Création d'un widget Button (bouton Lancer)
+BoutonLancer = Button(fen, text ='Lancer', command = NouveauLance)
+# Positionnement du widget avec la méthode pack()
+BoutonLancer.pack(side = RIGHT, padx = 5, pady = 5)
+
+# Création d'un widget Button (bouton Quitter)
+BoutonQuitter = Button(fen, text ='Quitter', command = fen.destroy)
+BoutonQuitter.pack(side = RIGHT, padx = 5, pady = 5)
+
+Texte = StringVar()
+NouveauLance()
+
+fen.mainloop()
