@@ -6,9 +6,9 @@ can.pack()
 
 #Plateau
 Ecuriej=can.create_rectangle(5,5,210,210,fill="yellow")
-Ecurier=can.create_rectangle(395,5,600,210,fill="red")
+Ecurieb=can.create_rectangle(395,5,600,210,fill="blue")
 Ecuriev=can.create_rectangle(5,395,200,600,fill="green")
-Ecurieb=can.create_rectangle(395,395,600,600,fill="blue")
+Ecurier=can.create_rectangle(395,395,600,600,fill="red")
 
 def Cheminj() :
     can.create_rectangle(235,270,270,334,fill="yellow")
@@ -17,17 +17,35 @@ def Cheminj() :
     can.create_rectangle(130,270,165,334,fill="yellow")
     can.create_rectangle(95,270,130,334,fill="yellow")
     can.create_rectangle(60,270,95,334,fill="yellow")
-Cheminj ()    
-def Cheminr() :
-    can.create_rectangle(5,5,210,210,fill="red")
-    can.create_rectangle(235,270,270,334,fill="red")
-    can.create_rectangle(235,270,270,334,fill="red")
-    can.create_rectangle(235,270,270,334,fill="red")
-    can.create_rectangle(235,270,270,334,fill="red")
-    can.create_rectangle(235,270,270,334,fill="red")
-    
-Cheminv=can.create_rectangle(5,5,210,210,fill="yellow")
-Cheminb=can.create_rectangle(5,5,210,210,fill="yellow")
+Cheminj ()
+
+def Cheminb() :
+    can.create_rectangle(270,235,334,270,fill="blue")
+    can.create_rectangle(270,200,334,235,fill="blue")
+    can.create_rectangle(270,165,334,200,fill="blue")
+    can.create_rectangle(270,130,334,165,fill="blue")
+    can.create_rectangle(270,95,334,130,fill="blue")
+    can.create_rectangle(270,60,334,95,fill="blue")
+Cheminb ()
+
+def Cheminv() :
+    can.create_rectangle(270,334,334,369,fill="green")
+    can.create_rectangle(270,369,334,404,fill="green")
+    can.create_rectangle(270,404,334,439,fill="green")
+    can.create_rectangle(270,439,334,474,fill="green")
+    can.create_rectangle(270,474,334,509,fill="green")
+    can.create_rectangle(270,509,334,544,fill="green")
+Cheminv ()
+
+def Cheminv() :
+    can.create_rectangle(334,270,369,334,fill="red")
+    can.create_rectangle(369,270,404,334,fill="red")
+    can.create_rectangle(404,270,439,334,fill="red")
+    can.create_rectangle(439,270,474,334,fill="red")
+    can.create_rectangle(474,270,509,334,fill="red")
+    can.create_rectangle(509,270,544,334,fill="red")
+Cheminv ()
+
 Prairie=can.create_rectangle(270,270,334,334,fill="black")
 
 #Dé
@@ -78,7 +96,6 @@ def NouveauLance():
         oval4=can.create_oval(670,310,690,330, fill="white")
         oval5=can.create_oval(710,270,730,290, fill="white")
     if nb == 6 :
-
         oval1=can.create_oval(670,265,690,285, fill="white")
         oval2=can.create_oval(710,315,730,335, fill="white")
         oval3=can.create_oval(670,315,690,335, fill="white")
