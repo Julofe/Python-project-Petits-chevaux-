@@ -1,63 +1,106 @@
 from tkinter import*
 from random import*
-fen = Tk()
-can=Canvas(fen,width=800,height=600,background='white')
-can.pack()
+fenetreplateau=Tk()
+fenetreplateau.geometry("950x750")
+fenetreplateau.title("jeu des petits chevaux")
+Fondde=Canvas(fenetreplateau,width=200,height=200)
+E=Canvas(fenetreplateau,width=750,height=750)
 
-#Plateau
-Ecuriej=can.create_rectangle(5,5,210,210,fill="yellow")
-Ecurieb=can.create_rectangle(395,5,600,210,fill="blue")
-Ecuriev=can.create_rectangle(5,395,200,600,fill="green")
-Ecurier=can.create_rectangle(395,395,600,600,fill="red")
+Fondde.place(x=750,y=0)
+E.place(x=0,y=0)
+a=400
+b=0
+c=0
+d=400
+e=50
+f=450
+g=50
+h=450
+a1=0
+b1=0
+De=0
 
-def Cheminj() :
-    can.create_rectangle(235,270,270,334,fill="yellow")
-    can.create_rectangle(200,270,235,334,fill="yellow")
-    can.create_rectangle(165,270,200,334,fill="yellow")
-    can.create_rectangle(130,270,165,334,fill="yellow")
-    can.create_rectangle(95,270,130,334,fill="yellow")
-    can.create_rectangle(60,270,95,334,fill="yellow")
-Cheminj ()
+#Création des ecuries
+E.create_rectangle(0,0,300,300,fill='yellow',width=2)
+E.create_rectangle(0,450,300,750,fill='blue',width=2)
+E.create_rectangle(450,0,750,300,fill='red',width=2)
+E.create_rectangle(450,450,750,750,fill='green',width=2)
+#Creation des placements de depart
+E.create_rectangle(0,300,50,350,fill="gold")
+E.create_rectangle(400,0,450,50,fill="darkred")
+E.create_rectangle(700,400,750,450,fill='darkgreen')
+E.create_rectangle(300,700,350,750,fill='darkblue')
+E.create_rectangle(700,350,750,400,fill="red")
+E.create_rectangle(350,0,400,50,fill="yellow")
+E.create_rectangle(0,350,50,400,fill="blue")
+E.create_rectangle(350,700,400,750,fill="green")
+#Creation du milieu
+E.create_polygon(350,350,375,375,350,400,outline="black", fill="yellow")
+E.create_polygon(400,350,375,375,400,400,outline="black",fill="green")
+E.create_polygon(350,350,400,350,375,375,outline="black",fill="red")
+E.create_polygon(350,400,400,400,375,375,outline="black",fill="blue")
+#Creation des chiffres
+P1j=Label(fenetreplateau,text="1",font=10,fg="gold")
+P2j=Label(fenetreplateau,text="2",font=10,fg="gold")
+P3j=Label(fenetreplateau,text="3",font=10,fg="gold")
+P4j=Label(fenetreplateau,text="4",font=10,fg="gold")
+P5j=Label(fenetreplateau,text="5",font=10,fg="gold")
+P6j=Label(fenetreplateau,text="6",font=10,fg="gold")
 
-def Cheminb() :
-    can.create_rectangle(270,235,334,270,fill="blue")
-    can.create_rectangle(270,200,334,235,fill="blue")
-    can.create_rectangle(270,165,334,200,fill="blue")
-    can.create_rectangle(270,130,334,165,fill="blue")
-    can.create_rectangle(270,95,334,130,fill="blue")
-    can.create_rectangle(270,60,334,95,fill="blue")
-Cheminb ()
+P1b=Label(fenetreplateau,text="6",font=10,fg="blue")
+P2b=Label(fenetreplateau,text="5",font=10,fg="blue")
+P3b=Label(fenetreplateau,text="4",font=10,fg="blue")
+P4b=Label(fenetreplateau,text="3",font=10,fg="blue")
+P5b=Label(fenetreplateau,text="2",font=10,fg="blue")
+P6b=Label(fenetreplateau,text="1",font=10,fg="blue")
 
-def Cheminv() :
-    can.create_rectangle(270,334,334,369,fill="green")
-    can.create_rectangle(270,369,334,404,fill="green")
-    can.create_rectangle(270,404,334,439,fill="green")
-    can.create_rectangle(270,439,334,474,fill="green")
-    can.create_rectangle(270,474,334,509,fill="green")
-    can.create_rectangle(270,509,334,544,fill="green")
-Cheminv ()
+P1v=Label(fenetreplateau,text="1",font=10,fg="red")
+P2v=Label(fenetreplateau,text="2",font=10,fg="red")
+P3v=Label(fenetreplateau,text="3",font=10,fg="red")
+P4v=Label(fenetreplateau,text="4",font=10,fg="red")
+P5v=Label(fenetreplateau,text="5",font=10,fg="red")
+P6v=Label(fenetreplateau,text="6",font=10,fg="red")
 
-def Cheminv() :
-    can.create_rectangle(334,270,369,334,fill="red")
-    can.create_rectangle(369,270,404,334,fill="red")
-    can.create_rectangle(404,270,439,334,fill="red")
-    can.create_rectangle(439,270,474,334,fill="red")
-    can.create_rectangle(474,270,509,334,fill="red")
-    can.create_rectangle(509,270,544,334,fill="red")
-Cheminv ()
+P1r=Label(fenetreplateau,text="1",font=10,fg="green")
+P2r=Label(fenetreplateau,text="2",font=10,fg="green")
+P3r=Label(fenetreplateau,text="3",font=10,fg="green")
+P4r=Label(fenetreplateau,text="4",font=10,fg="green")
+P5r=Label(fenetreplateau,text="5",font=10,fg="green")
+P6r=Label(fenetreplateau,text="6",font=10,fg="green")
 
-Prairie=can.create_rectangle(270,270,334,334,fill="black")
+P1j.place(x=70,y=360)
+P2j.place(x=120,y=360)
+P3j.place(x=170,y=360)
+P4j.place(x=220,y=360)
+P5j.place(x=270,y=360)
+P6j.place(x=320,y=360)
 
-#Dé
-Dé=can.create_rectangle(650,250,750,350,fill="black")
-oval=can.create_oval(650,250,650,250)
-oval1=can.create_oval(650,250,650,250)
-oval2=can.create_oval(650,250,650,250)
-oval3=can.create_oval(650,250,650,250)
-oval4=can.create_oval(650,250,650,250)
-oval5=can.create_oval(650,250,650,250)
-oval6=can.create_oval(650,250,650,250)
+P1v.place(x=365,y=60)
+P2v.place(x=365,y=110)
+P3v.place(x=365,y=160)
+P4v.place(x=365,y=210)
+P5v.place(x=365,y=260)
+P6v.place(x=365,y=310)
 
+P6r.place(x=420,y=360)
+P5r.place(x=470,y=360)
+P4r.place(x=520,y=360)
+P3r.place(x=570,y=360)
+P2r.place(x=620,y=360)
+P1r.place(x=670,y=360)
+
+P1b.place(x=365,y=410)
+P2b.place(x=365,y=460)
+P3b.place(x=365,y=510)
+P4b.place(x=365,y=560)
+P5b.place(x=365,y=610)
+P6b.place(x=365,y=660)
+
+
+
+
+
+#Lancement du dé
 def NouveauLance():
     global oval
     global oval1
@@ -96,24 +139,58 @@ def NouveauLance():
         oval4=can.create_oval(670,310,690,330, fill="white")
         oval5=can.create_oval(710,270,730,290, fill="white")
     if nb == 6 :
+
         oval1=can.create_oval(670,265,690,285, fill="white")
         oval2=can.create_oval(710,315,730,335, fill="white")
         oval3=can.create_oval(670,315,690,335, fill="white")
         oval4=can.create_oval(710,265,730,285, fill="white")
         oval5=can.create_oval(670,290,690,310, fill="white")
         oval6=can.create_oval(710,290,730,310, fill="white")
+        Sortir.config(state=NORMAL)
+        Deplacer.config(state=NORMAL)
+        Bouton.config(state=DISABLED)
 
 
-# Création d'un widget Button (bouton Lancer)
-BoutonLancer = Button(fen, text ='Lancer', command = NouveauLance)
-# Positionnement du widget avec la méthode pack()
-BoutonLancer.pack(side = RIGHT, padx = 5, pady = 5)
+def sortir():
+    E.coords(jetonv1,700,400)
+    E.tag_raise(jetonv1)
 
-# Création d'un widget Button (bouton Quitter)
-BoutonQuitter = Button(fen, text ='Quitter', command = fen.destroy)
-BoutonQuitter.pack(side = RIGHT, padx = 5, pady = 5)
+jetonv1=PhotoImage(file="jetonvert1.gif")
+E.tag_raise(jetonv1)
+E.create_image(450,450,anchor='nw',image=jetonv1)
 
-Texte = StringVar()
-NouveauLance()
+#Place des images et du bouton
+Bouton=Button(text="Lancer",command=NouveauLance,width=20)
+Bouton.place(x=770,y=300)
+Deplacer=Button(text="Déplacer",command=deplacer,state=DISABLED)
+Deplacer.place(x=765,y=500)
+Sortir=Button(text="Sortir",command=sortir,state=DISABLED)
+Sortir.place(x=850,y=500)
 
-fen.mainloop()
+#Creation du plateau
+for i in range (0,18):
+    E.create_rectangle(a1,350,a1+50,400)
+    a1=a1+50
+    E.create_rectangle(350,b1,400,b1+50)
+    b1=b1+50
+for i in range (0,7):
+    E.create_rectangle(a,300,a+50,350,fill="red")
+    a=a+50
+    E.create_rectangle(b,400,b+50,450,fill="blue")
+    b=b+50
+    E.create_rectangle(300,c,350,c+50,fill="yellow")
+    c=c+50
+    E.create_rectangle(400,d,450,d+50,fill="green")
+    d=d+50
+for i in range (0,5):
+    E.create_rectangle(400,e,450,e+50,fill="red")
+    e=e+50
+
+    f=f+50
+    E.create_rectangle(g,300,g+50,350,fill="yellow")
+    g=g+50
+    E.create_rectangle(h,400,h+50,450,fill="green")
+    h=h+50
+
+
+fenetreplateau.mainloop()
