@@ -99,7 +99,7 @@ rectc3r=can.create_rectangle(258,91,305,112,fill="darkred")
 rectc4r=can.create_rectangle(258,122,305,143,fill="darkred")
 rectc5r=can.create_rectangle(258,153,305,174,fill="darkred")
 rectc6r=can.create_rectangle(258,184,305,205,fill="darkred")
-
+ovalc6r=can.create_oval(258,215,305,265,fill="darkred")
 
 #centre jaune
 
@@ -109,6 +109,7 @@ rectc3j=can.create_rectangle(448,255,469,305,fill="yellow")
 rectc4j=can.create_rectangle(417,255,438,305,fill="yellow")
 rectc5j=can.create_rectangle(386,255,407,305,fill="yellow")
 rectc6j=can.create_rectangle(355,255,376,305,fill="yellow")
+ovalc6j=can.create_oval(295,255,345,305,fill="yellow")
 
 #centre vert
 
@@ -118,7 +119,7 @@ rectc3v=can.create_rectangle(258,444,308,465,fill="green")
 rectc4v=can.create_rectangle(258,413,308,434,fill="green")
 rectc5v=can.create_rectangle(258,382,308,403,fill="green")
 rectc6v=can.create_rectangle(258,351,308,372,fill="green")
-
+ovalc6v=can.create_oval(258,291,308,341,fill="green")
 #centre bleu
 
 rectc1b=can.create_rectangle(31,251,52,310,fill="blue")
@@ -127,6 +128,7 @@ rectc3b=can.create_rectangle(93,251,114,310,fill="blue")
 rectc4b=can.create_rectangle(124,251,145,310,fill="blue")
 rectc5b=can.create_rectangle(155,251,176,310,fill="blue")
 rectc6b=can.create_rectangle(186,251,207,310,fill="blue")
+ovalc7b=can.create_oval(217,255,267,305,fill="blue")
 
 
 
