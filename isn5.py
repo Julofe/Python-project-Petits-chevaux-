@@ -100,6 +100,7 @@ rectc4r=can.create_rectangle(258,122,305,143,fill="darkred")
 rectc5r=can.create_rectangle(258,153,305,174,fill="darkred")
 rectc6r=can.create_rectangle(258,184,305,205,fill="darkred")
 
+
 #centre jaune
 
 rectc1j=can.create_rectangle(509,255,530,305,fill="yellow")
@@ -112,6 +113,21 @@ rectc6j=can.create_rectangle(355,255,376,305,fill="yellow")
 #centre vert
 
 rectc1v=can.create_rectangle(258,506,308,527,fill="green")
+rectc2v=can.create_rectangle(258,475,308,496,fill="green")
+rectc3v=can.create_rectangle(258,444,308,465,fill="green")
+rectc4v=can.create_rectangle(258,413,308,434,fill="green")
+rectc5v=can.create_rectangle(258,382,308,403,fill="green")
+rectc6v=can.create_rectangle(258,351,308,372,fill="green")
+
+#centre bleu
+
+rectc1b=can.create_rectangle(31,251,52,310,fill="blue")
+rectc2b=can.create_rectangle(62,251,83,310,fill="blue")
+rectc3b=can.create_rectangle(93,251,114,310,fill="blue")
+rectc4b=can.create_rectangle(124,251,145,310,fill="blue")
+rectc5b=can.create_rectangle(155,251,176,310,fill="blue")
+rectc6b=can.create_rectangle(186,251,207,310,fill="blue")
+
 
 
 
