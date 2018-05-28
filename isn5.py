@@ -51,7 +51,7 @@ rect2b5=can.create_rectangle(314,413,345,434,fill="yellow")
 rect2b6=can.create_rectangle(314,382,345,402,fill="yellow")
 rect2b7=can.create_rectangle(314,351,345,372,fill="yellow")
 rect2b8=can.create_rectangle(325,325,345,345,fill="yellow")
-rect2b9=can.create_rectangle(253,537,308,555,fill="yellow")
+rect2b9=can.create_rectangle(258,537,308,555,fill="yellow")
 
 #partie verte
 
@@ -90,6 +90,29 @@ rect4b6=can.create_rectangle(217,60,252,81,fill="blue")
 rect4b7=can.create_rectangle(217,29,252,50,fill="blue")
 rect4b8=can.create_rectangle(217,5,252,21,fill="blue")
 rect4b9=can.create_rectangle(258,5,305,21,fill="blue")
+
+#centre rouge
+
+rectc1r=can.create_rectangle(258,29,305,50,fill="darkred")
+rectc2r=can.create_rectangle(258,60,305,81,fill="darkred")
+rectc3r=can.create_rectangle(258,91,305,112,fill="darkred")
+rectc4r=can.create_rectangle(258,122,305,143,fill="darkred")
+rectc5r=can.create_rectangle(258,153,305,174,fill="darkred")
+rectc6r=can.create_rectangle(258,184,305,205,fill="darkred")
+
+#centre jaune
+
+rectc1j=can.create_rectangle(509,255,530,305,fill="yellow")
+rectc2j=can.create_rectangle(479,255,500,305,fill="yellow")
+rectc3j=can.create_rectangle(448,255,469,305,fill="yellow")
+rectc4j=can.create_rectangle(417,255,438,305,fill="yellow")
+rectc5j=can.create_rectangle(386,255,407,305,fill="yellow")
+rectc6j=can.create_rectangle(355,255,376,305,fill="yellow")
+
+#centre vert
+
+rectc1v=can.create_rectangle(258,506,308,527,fill="green")
+
 
 
 
