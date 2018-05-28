@@ -33,6 +33,8 @@ rect1b6=can.create_rectangle(510,215,531,246,fill="red")
 rect1b7=can.create_rectangle(540,215,557,246,fill="red")
 rect1b8=can.create_rectangle(540,255,557,305,fill="red")
 
+#partie jaune
+
 oval1a1=can.create_oval(540,310,557,345,fill="yellow")
 rect2a1=can.create_rectangle(355,310,376,345,fill="yellow")
 rect2a2=can.create_rectangle(386,310,407,345,fill="yellow")
@@ -49,6 +51,14 @@ rect2b5=can.create_rectangle(314,413,345,434,fill="yellow")
 rect2b6=can.create_rectangle(314,382,345,402,fill="yellow")
 rect2b7=can.create_rectangle(314,351,345,372,fill="yellow")
 rect2b8=can.create_rectangle(325,325,345,345,fill="yellow")
+rect2b9=can.create_rectangle(263,537,308,555,fill="yellow")
+
+#partie verte
+
+oval1a1=can.create_oval(216,537,260,555,fill="yellow")
+rect3a1=can.create_rectangle(215,327,236,345,fill="yellow")
+rect3a2=can.create_rectangle(215,350,246,371,fill="yellow")
+
 
 
 oval=can.create_oval(650,250,650,250)
